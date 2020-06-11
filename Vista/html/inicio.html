@@ -21,24 +21,44 @@
             de cada ciudad aparte de eso pueden tambien conocer el clima que estas tienen en el momento. 
         </p>
     </div>
+    <hr>
+    <div class="container">
+        <section id="section1">
+            <h1>Noticias</h1>
+        </section>
+        <section id="section2">
+            <h1>Clima</h1>
+            <input type="text" placeholder="Buscar Ciudad" class="ciudad">
+            <button type="button" class="btn btn-primary">Buscar</button>
+            <div class="infoClima">
 
-    <nav class="navbar "> 
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Noticias</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Clima</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-    </nav>
+                <table>
+                    <tr>
+                        <td>Temperatura: </td>
+                        <td class="temp"></td>
+                    </tr>
+                    <tr>
+                        <td>Temperatura Max: </td>
+                        <td class="tempMax"></td>
+                    </tr>
+                    <tr>
+                        <td>Temperatura Min: </td>
+                        <td class="tempMin"></td>
+                    </tr>
+                    <tr>
+                        <td>Descripcion: </td>
+                        <td class="desc"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <script src="../apiClima.js"></script>
+    </div>
+
+    
+    
+    
+    
     
 </body>
 </html>
