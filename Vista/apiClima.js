@@ -1,25 +1,41 @@
+const url = 'https://api.openweathermap.org/data/2.5/weather?q='
+const pass = '86db6da2100419080fccd35b62111124'
+
 var button = document.querySelector('.btn')
 var ciudad = document.querySelector('.ciudad')
-var desc = document.querySelector('.desc')
-var temp = document.querySelector('.temp')
-var tempMax = document.querySelector('.tempMax')
-var tempMin = document.querySelector('.tempMin')
 
 button.addEventListener('click', function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+ciudad.value+'&appid=86db6da2100419080fccd35b62111124&lang=es')
-        .then(response => response.json())
+
+    fetch(url+ciudad.value+'&appid='+pass+'&lang=es')
+        .then(response => response.json() )
         .then(data => {
             
-            var tempValue = data['main']['temp'];
-            var tempMaxValue = data['main']['temp_max'];
-            var tempMinValue = data['main']['temp_min'];
-            var descValue = data['weather'][0]['description']
-
-            temp.innerHTML = tempValue;
-            tempMax.innerHTML = tempMaxValue;
-            tempMin.innerHTML = tempMinValue;
-            desc.innerHTML = descValue;
+            let infoClima = document.querySelector('.infoClima')
+            infoClima.innerHTML= `
+                <table>
+                    <tr>
+                        <td>Ciudad: </td>
+                        <td>${data.name}</td>
+                    </tr>
+                    <tr>
+                        <td>Temperatura: </td>
+                        <td>${data.main.temp}</td>
+                    </tr>
+                    <tr>
+                        <td>Temperatura Min: </td>
+                        <td>${data.main.temp_min}</td>
+                    </tr
+                    <tr>
+                        <td>Temperatura Max: </td>
+                        <td>${data.main.temp_max}</td>
+                    </tr>
+                    <tr>
+                        <td>Descripcion: </td>
+                        <td>${data.weather['0'].description}</td>
+                    </tr>
+                </table>
+                `;
         })
 
-.catch(err => alert("La ciudad no es correcta"))
+    .catch(err => alert("La ciudad no es correcta"))
 });

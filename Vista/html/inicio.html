@@ -18,47 +18,25 @@
         <h1 class="display-4">News Time</h1>
         <p class="lead">
             News Time es una pagina web en la cual puedes saber las ultimas noticias
-            de cada ciudad aparte de eso pueden tambien conocer el clima que estas tienen en el momento. 
+            y tambien conocer el clima de una ciudad deseada. 
         </p>
     </div>
     <hr>
     <div class="container">
         <section id="section1">
             <h1>Noticias</h1>
+            <input type="text" placeholder="Buscar Noticias" class="NoticiasCiudad">
+            <button type="button" class="btn btn-primary" id="btnNoticias">Buscar</button>
         </section>
+
+
         <section id="section2">
             <h1>Clima</h1>
             <input type="text" placeholder="Buscar Ciudad" class="ciudad">
             <button type="button" class="btn btn-primary">Buscar</button>
-            <div class="infoClima">
-
-                <table>
-                    <tr>
-                        <td>Temperatura: </td>
-                        <td class="temp"></td>
-                    </tr>
-                    <tr>
-                        <td>Temperatura Max: </td>
-                        <td class="tempMax"></td>
-                    </tr>
-                    <tr>
-                        <td>Temperatura Min: </td>
-                        <td class="tempMin"></td>
-                    </tr>
-                    <tr>
-                        <td>Descripcion: </td>
-                        <td class="desc"></td>
-                    </tr>
-                </table>
-            </div>
+            <div class="infoClima"></div>
         </section>
         <script src="../apiClima.js"></script>
-    </div>
-
-    
-    
-    
-    
-    
+    </div>  
 </body>
 </html>

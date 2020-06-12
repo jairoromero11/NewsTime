@@ -31,6 +31,17 @@
     text-align: center;
 }
 
+.NoticiasCiudad{
+    width: 550px;
+    float: left;
+    margin-right: 5px;
+}
+
+#btnNoticias{
+    float: left;
+}
+
+/*/***************/
 #section2{
     width: 30%;
     height: 100%;
