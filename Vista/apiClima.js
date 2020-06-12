@@ -1,10 +1,10 @@
 const url = 'https://api.openweathermap.org/data/2.5/weather?q='
 const pass = '86db6da2100419080fccd35b62111124'
 
-var button = document.querySelector('.btn')
+var btnClima = document.querySelector('#btnClima')
 var ciudad = document.querySelector('.ciudad')
 
-button.addEventListener('click', function(){
+btnClima.addEventListener('click', function(){
 
     fetch(url+ciudad.value+'&appid='+pass+'&lang=es')
         .then(response => response.json() )
