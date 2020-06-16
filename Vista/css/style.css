@@ -28,6 +28,9 @@
     height: 100%;
     float: left;
     box-sizing: border-box;
+}
+
+#section1 h1{
     text-align: center;
 }
 
@@ -61,5 +64,10 @@ input{
     padding-top: 10px;
     height: 300px;
     text-align: left;
+    font-size: 20px;
+}
+
+.infoNoticias{
+    width: 98%;
     font-size: 20px;
 }

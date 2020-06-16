@@ -1,10 +1,9 @@
 const url = 'https://api.openweathermap.org/data/2.5/weather?q='
 const pass = '86db6da2100419080fccd35b62111124'
 
-var btnClima = document.querySelector('#btnClima')
 var ciudad = document.querySelector('.ciudad')
 
-btnClima.addEventListener('click', function(){
+function buscarClima(){
 
     fetch(url+ciudad.value+'&appid='+pass+'&lang=es')
         .then(response => response.json() )
@@ -38,4 +37,4 @@ btnClima.addEventListener('click', function(){
         })
 
     .catch(err => alert("La ciudad no es correcta"))
-});
+}

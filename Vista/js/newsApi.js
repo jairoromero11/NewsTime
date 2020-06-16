@@ -1,38 +1,38 @@
-var uri = 'http://newsapi.org/v2/top-headlines?' +
-          'country=co&' +
-          'apiKey=b3d3966422c64a508a36570704b3dd8e';
+const uri = 'https://gnews.io/api/v3/search?q=';
+const token = '15bafa8215f42319ee4bcb7812889e87';
+var busqueda = document.querySelector("#busquedaNoticias")
 
-
-fetch(uri)
-    .then(response => response.json())
-    .then(data => console.log(data))
-.catch(error => console.log(error)); 
-/*$(document).ready(function() {
-
-    $("#btnNoticias").on("click", function(e){
-
-        e.preventDefault();
-        let busqueda = $("#busquedaNoticias").val();
-        let uri = "Access-Control-Allow-Origin:http://newsapi.org/v2/top-headlines?q="+busqueda+"&country=us&" +
-          "apiKey=b3d3966422c64a508a36570704b3dd8e";
-
-        if(busqueda !== ""){
-            $.ajax({
-                uri: uri,
-                method: "GET",
-                dataType: "json",
-
-                success: function(news){
-                    console.log(news);
-                },
-
-                error: function(){
-                    console.log("error");
-                }
-            })
-        }else{
-            console.log("esci")
-        }
-    });
-
-});*/
+function buscarNoticias(){
+    fetch(uri+busqueda.value+'&token='+token+'&lang=es')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            let infoNoticias = document.querySelector('.infoNoticias')
+            
+            /*for (let index = 0; index < data.articles.length; index++) {*/
+                infoNoticias.innerHTML=`
+                    
+                        <table>
+                            <tr>
+                                <td style="color:red; font-size: 30px; text-align: center;">${data.articles['0'].title}</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="${data.articles['0'].image}" width="100%" height="350">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>${data.articles['0'].publishedAt}</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: justify;">${data.articles['0'].description}</td>
+                            </tr>
+                            <tr>
+                                <td><a href="${data.articles['0'].url}">Leer mas</a></td>
+                            </tr>
+                        </table>
+                `;
+            /*}*/
+        });
+}
