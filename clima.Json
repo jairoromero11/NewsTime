@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": -122.08,
+    "lat": 37,39
+  },
+  "clima": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "descripción": "cielo despejado",
+      "icono": "01d"
+    }
+  ],
+  "base": "estaciones",
+  "principal": {
+    "temp": 282.55,
+    "feel_like": 281.86,
+    "temp_min": 280.37,
+    "temp_max": 284,26,
+    "presión": 1023,
+    "humedad": 100
+  },
+  "visibilidad": 16093,
+  "viento": {
+    "velocidad": 1.5,
+    "deg": 350
+  },
+  "nubes": {
+    "todos": 1
+  },
+  "dt": 1560350645,
+  "sys": {
+    "tipo 1,
+    "id": 5122,
+    "mensaje": 0.0139,
+    "país": "EE. UU.",
+    "amanecer": 1560343627,
+    "puesta de sol": 1560396563
+  },
+  "zona horaria": -25200,
+  "id": 420006353,
+  "name": "Mountain View",
+  "bacalao": 200
+}
